@@ -2,7 +2,7 @@
 
 The guest-facing website for The Wild Oasis, a small cabin hotel. Guests browse cabins, filter them by size, and pick stay dates on a calendar. Built while learning Next.js and Supabase.
 
-The staff dashboard for the same hotel is in [the-wild-oasis](https://github.com/Bhavyajain14/the-wild-oasis).
+The staff dashboard for the same hotel is in [wild-oasis-dashboard](https://github.com/Bhavyajain14/wild-oasis-dashboard).
 
 ## What works
 
