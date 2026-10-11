@@ -1,45 +1,45 @@
-# The Wild Oasis: Customer Booking Website
+# The Wild Oasis: Guest Website
 
-A full-stack web application for guests to browse, search, and book luxury resort cabins online.
+The guest-facing website for The Wild Oasis, a small cabin hotel. Guests browse cabins, filter them by size, and pick dates on a calendar where already booked dates are blocked. Built while learning Next.js and Supabase.
 
-## What This Project Does
+The staff dashboard for the same hotel is in [the-wild-oasis](https://github.com/Bhavyajain14/the-wild-oasis).
 
-- Guests can view cabin listings, filter by capacity, and check real-time availability.
-- Secure user authentication powered by Google and Supabase.
-- Guests can make cabin reservations, pick stay dates, and manage their profile details.
-- Guests can view, update, or cancel their upcoming reservations directly from their user dashboard.
-- Responsive design optimized for mobile devices, tablets, and desktop screens.
+## What works
 
-## Tech Stack
+- Cabin list loaded from Supabase, with a filter by guest capacity (small, medium, large) kept in the URL
+- Cabin detail pages, pre-built at build time with their own page titles
+- Date range picker that disables dates that are already booked
+- About page that refreshes its data once a day
+- Loading, error and not found pages
 
-- **Framework**: Next.js 14 (App Router) and React 19
-- **Backend & Database**: Supabase (Authentication, PostgreSQL Database, and Storage)
-- **Styling**: Tailwind CSS
-- **Icons & UI**: Heroicons and React Day Picker
-- **Data Handling**: Next.js Server Actions and Server Components
+## Not built yet
 
-## Getting Started
+- Google sign-in (the button is there, the login flow is not)
+- Saving a reservation, and the guest account pages (reservations list, profile)
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Bhavyajain14/the-wild-oasis-website.git
-   cd the-wild-oasis-website
-   ```
+## Tech
 
-2. Install dependencies:
+- Next.js (App Router, server components)
+- Supabase (PostgreSQL database and image storage)
+- Tailwind CSS, React Day Picker, Heroicons
+
+## Run it
+
+1. Install dependencies:
+
    ```bash
    npm install
    ```
 
-3. Configure environment variables in a `.env.local` file:
+2. Create a `.env.local` file with your Supabase project values:
+
    ```env
-   NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
-   NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+   SUPABASE_URL=your_supabase_url
+   SUPABASE_KEY=your_supabase_anon_key
    ```
 
-4. Run the development server:
+3. Start the dev server and open http://localhost:3000:
+
    ```bash
    npm run dev
    ```
-
-5. Open `http://localhost:3000` in your browser.
